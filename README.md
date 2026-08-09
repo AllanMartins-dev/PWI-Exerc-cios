@@ -1,1 +1,1 @@
-# PWI-Exerc-cios
+# PWI-Exercícios
