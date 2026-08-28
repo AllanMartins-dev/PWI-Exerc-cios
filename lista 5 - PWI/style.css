@@ -1,0 +1,44 @@
+#texto{
+    color: rgb(233, 100, 100);
+    font-size: 60px;
+    background-color: rgb(20, 1, 1);
+}
+
+#link1:link{
+     color: rgb(38, 38, 145);
+}
+
+#link2:hover{
+    color: red;
+}
+
+#link3:visited{
+    color: purple;
+}
+
+.intro{
+    text-align: center;
+    color:rgb(10, 19, 68);
+    background-color: rgb(126, 178, 223);
+}
+
+.descricao{
+    text-align: left;
+    color:rgb(54, 54, 175)
+}
+
+.coluna{
+    border: 2px solid #333;
+    display: inline-block;
+    
+}
+
+.coluna2{
+    display: inline-block;
+    border: 2px solid #333;
+}
+.caixa{
+    padding:10px;
+    margin: 20px;
+
+}
