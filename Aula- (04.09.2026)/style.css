@@ -1,0 +1,203 @@
+/* ===========================================================
+   🎮 DESAFIO: CARTÃO DE PERSONAGEM
+   ===========================================================
+   Sua missão é usar SELETORES + BOX MODEL para transformar
+   esse HTML sem graça em um cartão de personagem incrível.
+
+   Vá completando cada passo abaixo, na ordem. Depois de cada
+   passo, salve e olhe no navegador o que mudou!
+   =========================================================== */
+
+
+/* PASSO 0 - Reset básico (não mexa, já deixei pronto) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(https://i.pinimg.com/1200x/2a/28/7d/2a287d10b2d4c449d1b731b5189e57e5.jpg);
+  background-color: #14105e;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 60px 20px; /* espaço em volta, já que não vamos usar flex pra centralizar */
+}
+
+
+/* PASSO 1 - SELETOR DE ID
+   Selecione o elemento que tem id="cartao-personagem"
+   e dê a ele uma largura (width) de 300px, margin: 0 auto;
+   (isso centraliza o bloco na página) e um background
+   de cor branca (ou da cor que você quiser).
+*/
+#cartao-personagem{
+   width: 300px;
+   background-image: url(https://i.pinimg.com/736x/79/a7/bb/79a7bbaf984a06f7dd88428186322a16.jpg);
+   margin: 0 auto;
+   background-color: #fff;
+   padding: 20px;
+   border: 4px solid #021b15;
+   border-radius: 16px;
+}
+
+
+/* PASSO 2 - BOX MODEL: PADDING E BORDER
+   No mesmo seletor do PASSO 1, adicione:
+   - padding: 20px;
+   - border: 4px solid alguma-cor;
+   - border-radius: 16px; (deixa as bordas arredondadas)
+   Observe como o conteúdo se afasta da borda por causa do padding!
+*/
+
+/* PASSO 3 - SELETOR DE CLASSE (.avatar)
+   Deixe o emoji do avatar bem grande (font-size: 60px)
+   e centralizado (text-align: center).
+*/
+.avatar{
+   margin: 0 auto;
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   overflow: hidden;
+   border: 2px solid #000000;
+}
+
+.avatar img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
+
+
+/* PASSO 4 - SELETOR DE CLASSE (.nome)
+   Estilize o título com o nome do personagem:
+   text-align, color, font-size, margin-top/margin-bottom.
+*/
+.nome{
+   text-align:center;
+   color:#55ee958a;
+   font-size:40px;
+   margin-top: 70px;
+   margin-bottom: 80x;
+}
+
+
+/* PASSO 5 - SELETOR DE CLASSE (.classe e .nivel)
+   Dê um estilo diferente para o texto da classe do personagem
+   e para o "selo" de nível (pode usar display: inline-block,
+   background, padding e border-radius para virar uma "pílula").
+*/
+
+.classe{
+   display: block;
+   width: fit-content;
+   margin: 0 auto;
+   color: #4ca7728a;
+   font-style: italic;
+   padding:5px;
+   font-size:20px;
+}
+
+.nivel{
+   margin: 0 auto;
+   padding: 7px;
+   color:#55ee958a;
+   display: block;
+   width: fit-content;
+   background: #1d5f398a;
+   border-radius: 20px;
+   font-size:20px;
+   border: solid #10331f8a;
+}
+/* PASSO 6 - BOX MODEL: AS BARRAS DE VIDA E XP
+   .barra-fundo é o "fundo cinza" da barra (a caixa vazia).
+   Dê a ela: width: 100%; height: 16px; background-color: #ddd;
+   margin-bottom: 10px; border-radius: 8px; overflow: hidden;
+*/
+
+.barra-fundo{
+   width:100%;
+   height:16px;
+   background-color: #dddddd1c;
+   margin-bottom: 10px;
+   border-radius: 8px;
+   overflow: hidden;
+}
+
+/* PASSO 7 - AS BARRAS DE VERDADE (dentro do fundo)
+   .barra-vida -> width: 80%; height: 100%; background-color: verde;
+   .barra-xp   -> width: 45%; height: 100%; background-color: azul;
+   Repare que width em % é relativo ao elemento pai (.barra-fundo)!
+*/
+.barra-vida{
+   width: 80%;
+   height: 100%;
+   background-color: green;
+}
+
+.barra-xp{
+   width: 45%;
+   height: 100%;
+   background-color: blue;
+}
+/* PASSO 8 - LISTA DE ATRIBUTOS (.atributos e .atributo)
+   Tire os "pontinhos" da lista: list-style: none;
+   Em .atributo use padding, margin-bottom e background
+   para criar uma "etiqueta" para cada atributo.
+*/
+.atributos{
+ list-style: none;
+}
+
+.atributo{
+padding: 20px;
+margin-bottom: 15px;
+background: #55ee958a;
+border: solid #08493e;
+border: 20px;
+border-radius: 10px;
+}
+/* PASSO 9 - DESCRIÇÃO (.descricao)
+   Deixe o texto em itálico (font-style: italic) e com
+   um espaçamento (padding/margin) para não colar nas bordas.
+*/
+
+.descricao{
+   color: #55ee958a;
+   font-style: italic;
+   padding: 20px;
+   margin: 20px;
+}
+
+/* PASSO 10 - BOTÃO (.botao-acao)
+   Estilize o botão: padding, border: none, border-radius,
+   background-color, color, font-size, cursor: pointer.
+
+   DESAFIO EXTRA (seletor de estado / pseudo-classe):
+   Crie uma regra .botao-acao:hover { } para mudar a cor
+   de fundo quando o mouse passar em cima do botão!
+*/
+.botao-acao{
+   display: block;
+   width: 100%;
+   padding: 20px;
+   border-radius: 20px;
+   background-color: rgb(6, 48, 25);
+   color: #22af79;
+   font-size: 20px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+
+/* DESAFIO FINAL (opcional)
+   1. Troque o emoji do avatar e o nome do personagem no HTML.
+   2. Mude as cores para combinar com o tema do seu personagem.
+   3. Adicione uma sombra no cartão: box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+*/
